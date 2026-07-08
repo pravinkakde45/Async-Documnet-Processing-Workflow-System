@@ -1,0 +1,9 @@
+CURRICULUM VITAE
+Jane Smith - Senior Full-Stack Developer
+Email: janesmith@example.com
+GitHub: github.com/janesmith-dev
+Skills: Python, TypeScript, React, Docker, Kubernetes, FastAPI, Celery, PostgreSQL
+Experience:
+- Senior Engineer at TechCorp (2023 - Present)
+- Frontend Architect at DevSoft (2020 - 2023)
+Education: B.S. in Computer Science

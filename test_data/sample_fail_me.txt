@@ -1,0 +1,4 @@
+CRITICAL PROCESS ERROR SIMULATION FILE
+This document has the word "FAIL" inside its filename.
+This is captured by the Celery task and triggers a simulated parsing exception.
+Use this file to test job failure and the UI's retry action flow.

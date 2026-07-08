@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0c0d12; /* Sleek futuristic dark background */
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+/* Premium glassmorphic utility classes */
+.glass-panel {
+  background: rgba(20, 22, 31, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(22, 25, 37, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(26, 30, 44, 0.6);
+  border-color: rgba(9, 132, 227, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(9, 132, 227, 0.18);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #272c3d;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0984e3;
+}
+
+/* Custom glow borders */
+.glow-blue {
+  box-shadow: 0 0 15px -3px rgba(9, 132, 227, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px -3px rgba(34, 197, 94, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.3);
+}

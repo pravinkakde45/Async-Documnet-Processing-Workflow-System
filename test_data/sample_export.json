@@ -1,0 +1,25 @@
+[
+  {
+    "document_id": "403bf650-70f9-4d69-ad6a-8b8bc9ebc973",
+    "filename": "sample_invoice.pdf",
+    "file_size_bytes": 224,
+    "content_type": "application/pdf",
+    "title": "Invoice Analysis: sample_invoice.pdf",
+    "category": "Financial",
+    "summary": "This is an automated summary of the uploaded document 'sample_invoice.pdf'. The file size is 224 bytes with a content type of 'application/pdf'. The background workflow classified it as a 'Financial' document. Review the extracted attributes and finalize the results to enable exporting.",
+    "keywords": [
+      "extracted",
+      "financial",
+      "pdf",
+      "async-system"
+    ],
+    "metadata_json": {
+      "char_count": 1335,
+      "word_count": 42,
+      "confidence_score": 0.96,
+      "parser_version": "v1.2.0-beta",
+      "file_extension": ".pdf"
+    },
+    "finalized_at": "2026-07-08T20:45:12.453210"
+  }
+]
