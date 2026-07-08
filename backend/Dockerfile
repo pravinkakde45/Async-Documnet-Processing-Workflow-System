@@ -22,5 +22,8 @@ RUN mkdir -p /app/shared_data/uploads
 # Expose FastAPI port
 EXPOSE 8000
 
+# Ensure start script has executable permissions
+RUN chmod +x start.sh
+
 # Default CMD (can be overridden in docker-compose.yml for celery workers)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "start.sh"]

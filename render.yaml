@@ -19,7 +19,6 @@ services:
     env: docker
     dockerfilePath: Dockerfile
     dockerContext: backend
-    startCommand: sh start.sh
     plan: free
     envVars:
       - key: POSTGRES_SERVER
@@ -50,8 +49,8 @@ services:
           property: port
   # 3. Redis Queue Instance - FREE Plan
   - type: redis
-    name: docuflow-redis
     plan: free
+    ipAllowList: []
 
 # 4. PostgreSQL Database - FREE Plan
 databases:
