@@ -1,0 +1,2 @@
+# Force Unix line endings for shell scripts to prevent Docker execution crashes
+backend/start.sh text eol=lf
