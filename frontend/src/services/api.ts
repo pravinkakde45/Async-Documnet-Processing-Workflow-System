@@ -32,6 +32,7 @@ export interface ProcessedResult {
 export interface DocumentDetails {
   id: string;
   filename: string;
+  file_path: string;
   file_size: number;
   content_type: string;
   created_at: string;
