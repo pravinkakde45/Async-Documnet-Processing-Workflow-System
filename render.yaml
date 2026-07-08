@@ -1,0 +1,61 @@
+services:
+  # 1. Frontend Hosting (Static Site) - FREE Plan
+  - type: web
+    name: docuflow-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    publishDir: frontend/dist
+    plan: free
+    envVars:
+      # Replace the value URL below with your actual deployed backend Web Service URL on Render
+      - key: VITE_API_URL
+        value: https://docuflow-backend.onrender.com/api
+      - key: VITE_WS_URL
+        value: wss://docuflow-backend.onrender.com/api/ws
+
+  # 2. Combined API + Celery Worker (Docker Web Service) - FREE Plan
+  # This uses our start.sh script to run both FastAPI and Celery worker inside a single container instance
+  - type: web
+    name: docuflow-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    dockerContext: backend
+    startCommand: sh start.sh
+    plan: free
+    envVars:
+      - key: POSTGRES_SERVER
+        fromDatabase:
+          name: docuflow-db
+          property: host
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: docuflow-db
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: docuflow-db
+          property: password
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: docuflow-db
+          property: database
+      - key: REDIS_HOST
+        fromService:
+          type: redis
+          name: docuflow-redis
+          property: host
+      - key: REDIS_PORT
+        fromService:
+          type: redis
+          name: docuflow-redis
+          property: port
+
+# 3. PostgreSQL Database - FREE Plan
+databases:
+  - name: docuflow-db
+    plan: free
+
+# 4. Redis Queue Instance - FREE Plan
+redis:
+  - name: docuflow-redis
+    plan: free
