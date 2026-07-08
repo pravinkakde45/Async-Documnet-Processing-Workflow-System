@@ -49,6 +49,7 @@ services:
           property: port
   # 3. Redis Queue Instance - FREE Plan
   - type: redis
+    name: docuflow-redis
     plan: free
     ipAllowList: []
 
