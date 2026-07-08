@@ -1,10 +1,10 @@
 services:
   # 1. Frontend Hosting (Static Site) - FREE Plan
-  - type: static
+  - type: web
     name: docuflow-frontend
+    runtime: static
     buildCommand: cd frontend && npm install && npm run build
-    publishDir: frontend/dist
-    plan: free
+    staticPublishPath: frontend/dist
     envVars:
       # Replace the value URL below with your actual deployed backend Web Service URL on Render
       - key: VITE_API_URL
