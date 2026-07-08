@@ -12,9 +12,9 @@ services:
     envVars:
       # Replace the value URL below with your actual deployed backend Web Service URL on Render
       - key: VITE_API_URL
-        value: https://docuflow-backend.onrender.com/api
+        value: https://docuflow-backend-z6ic.onrender.com/api
       - key: VITE_WS_URL
-        value: wss://docuflow-backend.onrender.com/api/ws
+        value: wss://docuflow-backend-z6ic.onrender.com/api/ws
 
   # 2. Combined API + Celery Worker (Docker Web Service) - FREE Plan
   # This uses our start.sh script to run both FastAPI and Celery worker inside a single container instance
