@@ -49,6 +49,7 @@ class DocumentService:
         return {
             "id": doc.id,
             "filename": doc.filename,
+            "file_path": doc.file_path,
             "file_size": doc.file_size,
             "content_type": doc.content_type,
             "created_at": doc.created_at,
@@ -72,6 +73,7 @@ class DocumentService:
             results.append({
                 "id": doc.id,
                 "filename": doc.filename,
+                "file_path": doc.file_path,
                 "file_size": doc.file_size,
                 "content_type": doc.content_type,
                 "created_at": doc.created_at,
