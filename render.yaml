@@ -48,13 +48,12 @@ services:
           type: redis
           name: docuflow-redis
           property: port
-
-# 3. PostgreSQL Database - FREE Plan
-databases:
-  - name: docuflow-db
+  # 3. Redis Queue Instance - FREE Plan
+  - type: redis
+    name: docuflow-redis
     plan: free
 
-# 4. Redis Queue Instance - FREE Plan
-redis:
-  - name: docuflow-redis
+# 4. PostgreSQL Database - FREE Plan
+databases:
+  - name: docuflow-db
     plan: free
