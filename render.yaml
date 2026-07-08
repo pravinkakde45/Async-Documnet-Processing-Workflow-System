@@ -1,8 +1,7 @@
 services:
   # 1. Frontend Hosting (Static Site) - FREE Plan
-  - type: web
+  - type: static
     name: docuflow-frontend
-    env: static
     buildCommand: cd frontend && npm install && npm run build
     publishDir: frontend/dist
     plan: free
