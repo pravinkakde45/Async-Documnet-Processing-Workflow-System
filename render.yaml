@@ -5,6 +5,10 @@ services:
     runtime: static
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       # Replace the value URL below with your actual deployed backend Web Service URL on Render
       - key: VITE_API_URL
